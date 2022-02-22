@@ -15,12 +15,12 @@
 			<div class="book-form">
                 <form onsubmit="event.preventDefault();onFormSubmit();">
                     <div>
-                        <label>Full Name</label>
-                        <input type="text" name="name" id="name" required>
+                        <label>Author Name</label>
+                        <input type="text" name="name" id="aname" required>
                     </div>
                     <div>
-                        <label>Email Id</label>
-                        <input type="text" name="email" id="email" required>
+                        <label>Book Id</label>
+                        <input type="number" name="bookid" id="bookid" required>
                     </div>
                     <div>
                         <label>Book Name</label>
@@ -40,8 +40,8 @@
                 <table class="list" id="bookList">
                     
                         <tr>
-                            <th>Full Name</th>
-                            <th>Email Id</th>
+                            <th>Author Name</th>
+                            <th>Book Id</th>
                             <th>Book Name</th>
                             <th>Price</th>
                             <th>Actions</th>
