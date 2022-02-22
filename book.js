@@ -58,3 +58,7 @@ function onDelete(td) {
         document.getElementById("bookList").deleteRow(row.rowIndex);
         resetForm();
 }
+
+function validate(){
+    
+}
