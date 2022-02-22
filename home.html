@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+     Book Management System
+    </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+	<h1><center>Book Management System</center></h1>
+	<hr>
+			<div class="book-form">
+                <form onsubmit="event.preventDefault();onFormSubmit();">
+                    <div>
+                        <label>Full Name</label>
+                        <input type="text" name="name" id="name" required>
+                    </div>
+                    <div>
+                        <label>Email Id</label>
+                        <input type="text" name="email" id="email" required>
+                    </div>
+                    <div>
+                        <label>Book Name</label>
+                        <input type="text" name="Book Name" id="bookn" required>
+                    </div>
+                    <div>
+                        <label>Price</label>
+                        <input type="number" name="Price" id="price" required>
+                    </div>
+                    <div  class="form-action-buttons">
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+		</div>
+		<br/>
+		<div class = "books-table">
+                <table class="list" id="bookList">
+                    
+                        <tr>
+                            <th>Full Name</th>
+                            <th>Email Id</th>
+                            <th>Book Name</th>
+                            <th>Price</th>
+                            <th>Actions</th>
+                        </tr> 
+                    
+                    <tbody>
+
+                    </tbody>
+                </table>
+        </div>
+    <script src="book.js"></script>
+</body>
+</html>

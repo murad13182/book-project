@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "json-server": "^0.17.0"
+  },
+  "name": "javascript",
+  "version": "1.0.0",
+  "main": "book.js",
+  "scripts": {
+    "start":"json-server --watch ./database/db.json"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

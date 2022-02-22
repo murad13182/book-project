@@ -1,0 +1,55 @@
+
+<!DOCTYPE HTML>
+<HTML>
+  <Head>
+    <Title>Web Page</Title>
+  </Head>
+    <body>
+      <form>
+      <h1>Data</h1>
+      <input type="text" name="name" id="name" placeholder="Name"><br><br>
+      <input type="text" name="age" id="age" placeholder="Age"><br><br>
+      <button type="submit" id="addButton">ADD</button><br>
+      <p>map data</p>  
+    </form><br>
+    <table id="myTableData">
+      <tr>
+          <td><b>Name</b></td>
+          <td><b>Age</b></td>
+      </tr>
+  </table>
+      
+      <script>
+
+
+document.getElementById("addButton").addEventListener("click", function(event){
+  event.preventDefault()
+ 
+  let map=new Map();
+          let name=document.getElementById("name").value;
+          let age=document.getElementById("age").value;
+          var table = document.getElementById("myTableData");
+          map.set(name,age);
+          var rowCount = table.rows.length;
+    var row = table.insertRow(rowCount);
+    row.insertCell(0).innerHTML= name;
+    row.insertCell(1).innerHTML= age;
+    
+});
+        // function data(event){
+        //   event.preventDefault()
+        //   alert('preventdefault')
+     
+        // }
+        //function show(){
+          //for(let m of map.values()){
+            //document.getElementById("td").innerHTML=m;
+          //}
+       // }
+        //function fcall(){
+          //data()
+         // show()
+        //}
+      </script>
+    </body>
+</HTML>

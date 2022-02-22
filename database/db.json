@@ -1,0 +1,10 @@
+{
+    "books":[
+        {
+    "fullname":"vickky",
+        "email":"vickky@gmail.com",
+        "bookn":"mathematics",
+        "price":150
+        }
+    ]
+}
