@@ -2,13 +2,16 @@ var selectedRow = null
 
 function onFormSubmit() {
     
-    var formData = readFormData();
+    var checkvalidate=validate();
+    if(checkvalidate){
+    var formData = readFormData();    
     if (selectedRow == null){
             insertNewRecord(formData);
     }else{
             updateRecord(formData);
     }
     resetForm();
+    }
 }
 function readFormData() {
     var formData = {};
@@ -60,5 +63,45 @@ function onDelete(td) {
 }
 
 function validate(){
-    
+  var authorn =document.getElementById('aname');
+  //var booksid=document.getElementById("bookid");
+  var booksn=document.getElementById('bookn');
+  //var prices=document.getElementById('price');
+
+
+  var checkauthor=/^[a-zA-Z 0-9]*$/;
+  var checkbook=/^[a-zA-Z 0-9]*$/;
+  
+  let testing=0;
+  if(authorn.value.split(' ').join('')){
+    testing++;
+  }
+  else {
+    authorn.style.border="2px solid red";
+    alert('something went wrong');
+    return false
+
+  }
+
+  if(checkauthor.test(authorn.value)){
+      testing++;
+  }
+  else{
+      authorn.style.border="2px solid red";
+      alert('something went wrong');
+      return false
+  }
+  if(checkbook.test(booksn.value)){
+      testing++;
+  }
+  else{
+      booksn.style.border="2px solid red";
+      alert('something went wrong');
+      return false;
+  }
+  if(testing>0){
+      authorn.style.border='1px solid black';
+      booksn.style.border='1px solid black';
+    return true;
+}
 }
